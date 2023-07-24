@@ -1,0 +1,1 @@
+Proyecto de ejemplo para aplicación CRUD que incluye un login simple sin validación.
