@@ -34,7 +34,14 @@ export default {
       try {
         const response = await axios.post('http://localhost:8080/authentication', json);
         console.log(response.data);
-        window.location.href = "http://localhost:5173/profile"; 
+        if(response.data == "home_interno_page"){
+          window.location.href = "http://localhost:5173/profile"; 
+          alert('Inicio de sesión exitoso');
+        }
+        else{
+          alert('Error al iniciar sesión: Credenciales Erróneas');
+        }
+        
       } catch (error) {
         console.error(error);
       }
